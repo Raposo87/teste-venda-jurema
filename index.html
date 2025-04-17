@@ -17,12 +17,14 @@
             color: #333;
             line-height: 1.6;
             padding: 20px;
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         
         .container {
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             padding: 30px 20px;
         }
         
@@ -31,6 +33,7 @@
             font-size: 2.5rem;
             margin-bottom: 20px;
             font-weight: 700;
+            text-align: center;
         }
         
         .imagem-destaque {
@@ -77,6 +80,35 @@
             color: #8e44ad;
         }
         
+        /* Layout para telas maiores */
+        @media (min-width: 900px) {
+            .container {
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 40px;
+            }
+            
+            .texto-coluna {
+                flex: 1;
+                padding-right: 20px;
+            }
+            
+            .imagem-coluna {
+                flex: 1;
+                position: sticky;
+                top: 20px;
+            }
+            
+            h1 {
+                text-align: left;
+            }
+            
+            .imagem-destaque {
+                margin: 0;
+                max-width: 100%;
+            }
+        }
+        
         @media (max-width: 600px) {
             h1 {
                 font-size: 2rem;
@@ -95,17 +127,21 @@
 </head>
 <body>
     <div class="container">
-        <h1>Desafio 21 Dias do Despertar da Mulher Inabalável</h1>
+        <div class="texto-coluna">
+            <h1>Desafio 21 Dias do Despertar da Mulher Inabalável</h1>
+            
+            <p class="descricao">
+                Durante <span class="destaque">21 dias transformadores</span>, você terá acesso a exercícios diários cuidadosamente elaborados para despertar sua força interior. Cada dia traz uma nova atividade, com duração entre <span class="destaque">20 e 40 minutos</span>, totalmente online e que você pode fazer no conforto da sua casa.
+                <br><br>
+                Este é o momento de se reconectar com sua essência, fortalecer sua autoconfiança e se tornar a <span class="destaque">mulher inabalável</span> que você nasceu para ser. O desafio começa no primeiro dia e te guia passo a passo até a conclusão dessa jornada transformadora.
+            </p>
+            
+            <button class="botao-inscricao">Quero me inscrever agora!</button>
+        </div>
         
-        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Mulher empoderada" class="imagem-destaque">
-        
-        <p class="descricao">
-            Durante <span class="destaque">21 dias transformadores</span>, você terá acesso a exercícios diários cuidadosamente elaborados para despertar sua força interior. Cada dia traz uma nova atividade, com duração entre <span class="destaque">20 e 40 minutos</span>, totalmente online e que você pode fazer no conforto da sua casa.
-            <br><br>
-            Este é o momento de se reconectar com sua essência, fortalecer sua autoconfiança e se tornar a <span class="destaque">mulher inabalável</span> que você nasceu para ser. O desafio começa no primeiro dia e te guia passo a passo até a conclusão dessa jornada transformadora.
-        </p>
-        
-        <button class="botao-inscricao">Quero me inscrever agora!</button>
+        <div class="imagem-coluna">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Mulher empoderada" class="imagem-destaque">
+        </div>
     </div>
 </body>
 </html>
