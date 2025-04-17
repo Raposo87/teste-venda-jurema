@@ -1,151 +1,264 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio 21 Dias - Mulher Inabalável</title>
+    <title>Mentoria Versalhes | Larissa Topper</title>
     <style>
+        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
         }
         
         body {
-            background-image: url('https://images.unsplash.com/photo-1583486791171-0f364970a8f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fE11bGhlciUyMGVtJTIwcG9zZSUyMGRlJTIwcG9kZXIlMjB%2BfGVufDB8fDB8fHww');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-color: #f8f1f7;
-            color: #333;
+            background-color: #fff;
+            color: #4F0D0C;
             line-height: 1.6;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
         }
         
+        /* Container styles */
         .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header section */
+        .header {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 30px 20px;
-        }
-        
-        h1 {
-            color: #8e44ad;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
             text-align: center;
+            padding: 40px 20px;
+            background-color: #f9f9f9;
         }
         
-        .imagem-destaque {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-            border-radius: 10px;
-            margin: 25px auto;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        .header-image {
+            max-width: 194px;
+            margin-bottom: 20px;
         }
         
-        .descricao {
-            font-size: 1.1rem;
+        .header-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #4F0D0C;
+        }
+        
+        .header-description {
+            font-size: 18px;
             margin-bottom: 30px;
-            color: #555;
-            text-align: justify;
-            padding: 0 10px;
+            max-width: 800px;
         }
         
-        .botao-inscricao {
-            display: inline-block;
-            background-color: #9b59b6;
-            color: white;
-            padding: 15px 40px;
-            font-size: 1.2rem;
-            border-radius: 50px;
+        /* Button styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            background-color: #4F0D0C;
+            color: #EBEAE6;
             text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(155, 89, 182, 0.5);
-            border: none;
-            cursor: pointer;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s;
         }
         
-        .botao-inscricao:hover {
-            background-color: #8e44ad;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(155, 89, 182, 0.6);
+        .btn:hover {
+            background-color: #3a0a09;
         }
         
-        .destaque {
-            font-weight: bold;
-            color: #8e44ad;
+        .btn-icon {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
         }
         
-        /* Layout para telas maiores */
-        @media (min-width: 900px) {
-            .container {
-                flex-direction: row;
-                align-items: flex-start;
-                gap: 40px;
-            }
-            
-            .texto-coluna {
-                flex: 1;
-                padding-right: 20px;
-            }
-            
-            .imagem-coluna {
-                flex: 1;
-                position: sticky;
-                top: 20px;
-            }
-            
-            h1 {
-                text-align: left;
-            }
-            
-            .imagem-destaque {
-                margin: 0;
-                max-width: 100%;
-            }
+        /* Main content sections */
+        .section {
+            padding: 60px 20px;
         }
         
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2rem;
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #4F0D0C;
+        }
+        
+        .section-text {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .section-text b {
+            color: #4F0D0C;
+            font-weight: 700;
+        }
+        
+        /* Icon box */
+        .icon-box {
+            display: flex;
+            align-items: center;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+        }
+        
+        .icon-box-icon {
+            margin-right: 20px;
+            min-width: 60px;
+        }
+        
+        .icon-box-content {
+            flex: 1;
+        }
+        
+        .icon-box-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #4F0D0C;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 24px;
             }
             
-            .descricao {
-                font-size: 1rem;
+            .section-title {
+                font-size: 28px;
             }
             
-            .botao-inscricao {
-                padding: 12px 30px;
-                font-size: 1rem;
-                margin: auto auto;
+            .section-text, .header-description {
+                font-size: 16px;
+            }
+            
+            .icon-box {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .icon-box-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
             }
         }
     </style>
+    <link href="" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="texto-coluna">
-            <h1>Desafio 21 Dias do Despertar da Mulher Inabalável</h1>
-            
-            <p class="descricao">
-                Durante <span class="destaque">21 dias transformadores</span>, você terá acesso a exercícios diários cuidadosamente elaborados para despertar sua força interior. Cada dia traz uma nova atividade, com duração entre <span class="destaque">20 e 40 minutos</span>, totalmente online e que você pode fazer no conforto da sua casa.
-                <br><br>
-                Este é o momento de se reconectar com sua essência, fortalecer sua autoconfiança e se tornar a <span class="destaque">mulher inabalável</span> que você nasceu para ser. O desafio começa no primeiro dia e te guia passo a passo até a conclusão dessa jornada transformadora.
-            </p>
-            
-            <button class="botao-inscricao">Quero me inscrever agora!</button>
+    <!-- Header Section -->
+    <header class="header">
+        <img src="https://images.pexels.com/photos/1006195/pexels-photo-1006195.png?auto=compress&cs=tinysrgb&w=800" alt="Mentoria Versalhes" class="header-image">
+        <h1 class="header-title">
+            Chegou a hora de ter uma <br>
+            <span style="margin-left: 56px">carreira com propósito.</span>
+        </h1>
+        <p class="header-description">
+            A mentoria de formação para você se tornar uma Terapeuta de Relacionamentos e viver com propósito, realizada e bem remunerada.
+        </p>
+        <p class="header-description">
+            Preencha a sua Aplicação e, caso for selecionada, a nossa equipe entrará em contato para te contar sobre um Desconto Especial + Bônus!
+        </p>
+        <a href="https://form.typeform.com/to/IHTF1J7v" class="btn">
+            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38" fill="none">
+                <path d="M19 3.16669C14.8008 3.16669 10.7735 4.83484 7.80416 7.80416C4.83484 10.7735 3.16669 14.8008 3.16669 19C3.16669 23.1993 4.83484 27.2266 7.80416 30.1959C10.7735 33.1652 14.8008 34.8334 19 34.8334C23.1993 34.8334 27.2266 33.1652 30.1959 30.1959C33.1652 27.2266 34.8334 23.1993 34.8334 19C34.8334 14.8008 33.1652 10.7735 30.1959 7.80416C27.2266 4.83484 23.1993 3.16669 19 3.16669Z" stroke="#EBEAE6" stroke-width="1.26667" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M19 25.3334L25.3333 19L19 12.6667" stroke="#EBEAE6" stroke-width="1.26667" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M12.6667 19H25.3334" stroke="#EBEAE6" stroke-width="1.26667" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Preencha a sua Aplicação
+        </a>
+        <div style="margin-top: 20px;">
+            <p>Aplicações a partir do dia 10/04</p>
         </div>
-        
-        <div class="imagem-coluna">
-            <img src="https://images.pexels.com/photos/1886487/pexels-photo-1886487.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Mulher empoderada" class="imagem-destaque">
-        </div>
-    </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <section class="section">
+            <h2 class="section-title">Seu convite chegou!</h2>
+            
+            <div class="section-text">
+                <p><span style="font-weight: 700;">O Versalhes</span> é uma jornada transformadora para mulheres que aspiram a se tornar terapeutas de relacionamentos e alcançar uma carreira repleta de <b>significado, reconhecimento e prosperidade financeira.</b></p>
+                
+                <p style="color: rgba(79, 13, 12, 0.4); margin-top: 20px;">
+                    No Versalhes, você terá acesso a absolutamente <b>TUDO</b> que é necessário para se tornar <b>uma terapeuta de relacionamentos de sucesso</b>, seguindo o mesmo caminho que eu segui para alcançar a vida plena que eu tenho hoje, conectada profundamente com seu propósito e transformando a vida de muitas mulheres.
+                </p>
+                
+                <p style="color: rgba(79, 13, 12, 0.4); margin-top: 20px;">
+                    Toda mulher tem um potencial ilimitado para impactar o mundo e <b>prosperar financeiramente como terapeuta</b>, só precisa do direcionamento certo e da formação que a transforme em uma autoridade no assunto.
+                </p>
+            </div>
+            
+            <div class="icon-box">
+                <div class="icon-box-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 133 133" fill="none">
+                        <path d="M133 66.5C133 103.227 103.227 133 66.5 133C29.7731 133 0 103.227 0 66.5C0 29.7731 29.7731 0 66.5 0C103.227 0 133 29.7731 133 66.5Z" fill="url(#paint0_radial_74_489)"></path>
+                        <!-- Simplified SVG path for brevity -->
+                        <path d="M37.782 64.1546C40.1459 64.1546 42.1006 66.0866 42.1006 69.0187C42.1006 72.1327 39.9186 74.4966 36.9637 74.4966C34.2361 74.4966 31.9631 72.4737 31.9631 68.0186C31.9631 63.109 34.7362 59.1313 39.2821 57.4038L39.4412 57.8584C36.2136 59.3131 34.418 62.3362 34.0543 66.0866C34.8044 65.132 36.1227 64.1546 37.782 64.1546ZM37.2592 73.9057C39.0321 73.9057 40.1231 72.2918 40.1231 69.7234C40.1231 66.7912 38.7139 65.3365 36.85 65.3365C35.5544 65.3365 34.5771 66.1093 33.9861 66.9049C33.9634 67.1549 33.9634 67.4277 33.9634 67.6777C33.9634 71.9282 35.3499 73.9057 37.2592 73.9057Z" fill="#4F0D0C" fill-opacity="0.4"></path>
+                    </svg>
+                </div>
+                <div class="icon-box-content">
+                    <p><b>É isso que você vai receber</b>, e ainda com o meu acompanhamento de perto durante os <b>6 meses de formação.</b></p>
+                </div>
+            </div>
+            
+            <div class="section-text">
+                <p><span style="font-weight: 700;">Você</span> não só <b>aprenderá de forma simples e prática</b> as técnicas mais avançadas de terapia e as estratégias de negócios para crescer, mas também <b>descobrirá sua voz única</b>, aprimorando sua presença magnética e criando uma prática que reflete quem você realmente é.</p>
+                
+                <p style="color: rgba(79, 13, 12, 0.4); margin-top: 20px;">
+                    O Versalhes é mais do que uma formação profissional, <b>é um movimento em direção à excelência, ao equilíbrio pessoal e à realização de sonhos.</b>
+                </p>
+                
+                <p style="color: rgba(79, 13, 12, 0.4); margin-top: 20px;">
+                    Junte-se a nós e comece a viver a vida abundante que você merece e foi destinada a viver. <b>Transforme sua carreira,</b> transforme vidas e alcance a liberdade de tempo e a liberdade financeira <b>faturando acima de R$10 mil por mês.</b>
+                </p>
+                
+                <p style="color: rgba(79, 13, 12, 0.4); margin-top: 20px;">
+                    Prepare-se para uma jornada de descoberta, crescimento e sucesso sem precedentes.
+                </p>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://form.typeform.com/to/IHTF1J7v" class="btn">
+                    <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38" fill="none">
+                        <path d="M19 3.16669C14.8008 3.16669 10.7735 4.83484 7.80416 7.80416C4.83484 10.7735 3.16669 14.8008 3.16669 19C3.16669 23.1993 4.83484 27.2266 7.80416 30.1959C10.7735 33.1652 14.8008 34.8334 19 34.8334C23.1993 34.8334 27.2266 33.1652 30.1959 30.1959C33.1652 27.2266 34.8334 23.1993 34.8334 19C34.8334 14.8008 33.1652 10.7735 30.1959 7.80416C27.2266 4.83484 23.1993 3.16669 19 3.16669Z" stroke="#EBEAE6" stroke-width="1.26667" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M19 25.3334L25.3333 19L19 12.6667" stroke="#EBEAE6" stroke-width="1.26667" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M12.6667 19H25.3334" stroke="#EBEAE6" stroke-width="1.26667" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    Preencha a sua Aplicação
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Simple JavaScript for any interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // You can add any JavaScript functionality here
+            console.log('Website loaded');
+            
+            // Example: Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
